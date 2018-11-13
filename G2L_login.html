@@ -4,8 +4,11 @@
 	<title></title>
 	<meta charset="UTF-8">
 	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Oswald|Lalezar|Pontano+Sans');
 	
 	#title {
+		font-family: 'Lalezar', cursive;
+		font-size: 26pt;
 		text-align: center;
 	}
 	
@@ -14,30 +17,50 @@
 	}
 	
 	.textfield {
+		font-family: 'Pontano Sans', sans-serif;
+		height: 1.5em;
 		width: 18em;
 	}
 	
 	fieldset {
-		margin-left: 10em;
-		margin-right: 10em;
+		font-family: 'Oswald', sans-serif;
+		font-size: 15pt;
+		color: white;
+		background-color: #b2b2b2;
+		border-radius: 25px;
+		margin-left: 8em;
+		margin-right: 8em;
+		height: 22.5em;
+	}
+	
+	.button {
+		color: white;
+		background-color: #555555;
+		font-family: 'Oswald', sans-serif;
+		font-size: 14pt;
+		padding: 0.2em 0.5em;
+		border-radius: 5px;
 	}
 	
 	</style>
 </head>
 
 <body>
-	<div id="title"><h3>G2L Login Page</h3></div>
+	<div id="title">G2L Login Page</div>
 	
 	<fieldset>
-		<legend>User Profile</legend>
+		<!--<legend>User Profile</legend>-->
 		<form id="submission_form">
+			<br/>
 			Username:<br/>
-			<input type="text" name="username" placeholder="8 - 20 letters ONLY" pattern=".{8,20}[A-Z a-z]" required class="textfield" ><br/><br/>
+			<input type="text" name="username" placeholder="8 - 20 letters only!" pattern=".{8,20}[A-Z a-z]" required class="textfield"><br/><br/>
 			Password:<br/>
-			<input type="password" name="password" placeholder="10 - 20 letters OR numbers" pattern=".{10,20}[A-Z a-z 0-9]" required class="textfield" ><br/><br/>
+			<input type="password" name="password" placeholder="10 - 20 letters OR numbers only!" pattern=".{10,20}[A-Z a-z 0-9]" required class="textfield"><br/><br/>
+			Student Number:<br/>
+			<input type="text" name="studentNumber" placeholder="9 letters or numbers only!" pattern=".{9}[A-Z a-z 0-9]" required class="textfield"><br/><br/>
 			Course Program:<br/>
-			<input type="text" name="course" placeholder="BCIT Courses Programs only!" class="textfield" ><br/><br/>
-			<input type="submit"> &nbsp; <input type="reset">
+			<input type="text" name="course" placeholder="BCIT Courses Programs only!" class="textfield"><br/><br/>
+			<input type="submit" class="button"> &nbsp; <input type="reset" class="button">
 	</fieldset>
 	
 </body>
