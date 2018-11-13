@@ -5,21 +5,38 @@
 	<meta charset="UTF-8">
 	<style type="text/css">
 	
+	#title {
+		text-align: center;
+	}
+	
+	fieldset {
+		text-align: center;
+	}
+	
+	.textfield {
+		width: 18em;
+	}
+	
+	fieldset {
+		margin-left: 10em;
+		margin-right: 10em;
+	}
+	
 	</style>
 </head>
 
 <body>
-	<div><h3>G2L Login Page</h3></div>
+	<div id="title"><h3>G2L Login Page</h3></div>
 	
 	<fieldset>
 		<legend>User Profile</legend>
 		<form id="submission_form">
 			Username:<br/>
-			<input type="text" name="username" placeholder="8 - 20 letters ONLY" pattern=".{8,20}[A-Z a-z]" required><br/><br/>
+			<input type="text" name="username" placeholder="8 - 20 letters ONLY" pattern=".{8,20}[A-Z a-z]" required class="textfield" ><br/><br/>
 			Password:<br/>
-			<input type="password" name="password" placeholder="10 - 20 letters OR numbers" pattern=".{10,20}[A-Z a-z 0-9]" required><br/><br/>
+			<input type="password" name="password" placeholder="10 - 20 letters OR numbers" pattern=".{10,20}[A-Z a-z 0-9]" required class="textfield" ><br/><br/>
 			Course Program:<br/>
-			<input type="text" name="course" placeholder="BCIT Courses Programs only!"><br/><br/>
+			<input type="text" name="course" placeholder="BCIT Courses Programs only!" class="textfield" ><br/><br/>
 			<input type="submit"> &nbsp; <input type="reset">
 	</fieldset>
 	
