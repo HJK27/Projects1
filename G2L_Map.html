@@ -3,17 +3,42 @@
     <title>BCIT G2L Map</title>
 	<style>
 	  #map {
-	    width: 450pt;
-	    margin-left: auto;
-		margin-right: auto;
+      width: 70%;
+      float:right;
+      margin-right: 5%;
+      height:580px;
+    }
+    #menu {
+      float:left;
+      width: 20%;
+      height:580px;
+      background-color: grey;
+    }
+    .item{
+      font-weight: bold;
+      text-align: center;
+      font-size: 25pt;
     }
     .title{
-      text-align: center; 
+      text-align: center;
+      font-weight: bold;
+      font-size: 30pt; 
     }
 	</style>
   </head>
   <body>
-    <p class="title">BCIT Map</p>
-    <img src="./map.png" id="map">
+    <div>
+        <div>
+          <p class="title">BCIT Map</p>
+        </div>
+        <div id="menu">
+          <p class="item">Search</p>
+          <br>
+          <p class="item">Events</p>
+        </div>
+        <div>
+        <img src="./map.png" id="map">
+        </div>
+    </div>
   </body>
 </html>
