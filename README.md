@@ -1,2 +1,2 @@
 # Projects1
-Repo for projects sprints
+Repo for Projects1 sprints
