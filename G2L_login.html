@@ -6,61 +6,67 @@
 	<style type="text/css">
 	@import url('https://fonts.googleapis.com/css?family=Oswald|Lalezar|Pontano+Sans');
 	
-	#title {
-		font-family: 'Lalezar', cursive;
-		font-size: 26pt;
-		text-align: center;
+	body {
+		background-image: url("./bubble-2811093_1920.jpg");
 	}
 	
-	fieldset {
+	#title {
+		margin-top: 0.5em;
+		font-family: 'Lalezar', cursive;
+		font-size: 30pt;
 		text-align: center;
+	}
+
+	fieldset {
+		margin-top: 2em;
+		text-align: center;
+		font-family: 'Oswald', sans-serif;
+		font-size: 15pt;
+		background-color: rgb(248,248,255, 0.7);
+		border: none;
+		border-radius: 20px;
+		margin-left: 22.5em;
+		margin-right: 22.5em;
+		height: 24em;
 	}
 	
 	.textfield {
 		font-family: 'Pontano Sans', sans-serif;
-		height: 1.5em;
-		width: 18em;
-	}
-	
-	fieldset {
-		font-family: 'Oswald', sans-serif;
-		font-size: 15pt;
-		color: white;
-		background-color: #b2b2b2;
-		border-radius: 25px;
-		margin-left: 8em;
-		margin-right: 8em;
-		height: 22.5em;
+		height: 2em;
+		width: 16em;
+		border-radius: 8px;
+		text-align: center;
 	}
 	
 	.button {
 		color: white;
-		background-color: #555555;
+		background-color: #9d60fb;
 		font-family: 'Oswald', sans-serif;
 		font-size: 14pt;
-		padding: 0.2em 0.5em;
-		border-radius: 5px;
+		padding: 0.2em 0.8em;
+		border-radius: 20px;
+	}
+	
+	.divider {
+		margin-bottom: 1em;
 	}
 	
 	</style>
 </head>
 
 <body>
-	<div id="title">G2L Login Page</div>
-	
 	<fieldset>
-		<!--<legend>User Profile</legend>-->
 		<form id="submission_form">
-			<br/>
-			Username:<br/>
-			<input type="text" name="username" placeholder="8 - 20 letters only!" pattern=".{8,20}[A-Z a-z]" required class="textfield"><br/><br/>
-			Password:<br/>
-			<input type="password" name="password" placeholder="10 - 20 letters OR numbers only!" pattern=".{10,20}[A-Z a-z 0-9]" required class="textfield"><br/><br/>
-			Student Number:<br/>
-			<input type="text" name="studentNumber" placeholder="9 letters or numbers only!" pattern=".{9}[A-Z a-z 0-9]" required class="textfield"><br/><br/>
-			Course Program:<br/>
-			<input type="text" name="course" placeholder="BCIT Courses Programs only!" class="textfield"><br/><br/>
-			<input type="submit" class="button"> &nbsp; <input type="reset" class="button">
+			<div id="title">G2L Login Page</div>
+			<div class="divider">Username:<br/>
+			<input type="text" name="username" placeholder="8 - 20 letters" pattern=".{8,20}[A-Z a-z]" required class="textfield"></div>
+			<div class="divider">Password:<br/>
+			<input type="password" name="password" placeholder="8 - 20 letters OR numbers" pattern=".{8,20}[A-Z a-z 0-9]" required class="textfield"></div>
+			<div class="divider">Student Number:<br/>
+			<input type="text" name="studentNumber" placeholder="ex. A00809999" pattern=".{9}[A-Z a-z 0-9]" required class="textfield"></div>
+			<div class="divider">Course Program:<br/>
+			<input type="text" name="course" placeholder="ex. CST Diploma" class="textfield"></div>
+			<div class="divider"><input type="submit" class="button"> &nbsp; <input type="reset" class="button"></div>
 	</fieldset>
 	
 </body>
