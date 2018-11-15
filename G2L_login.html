@@ -39,6 +39,18 @@
 		text-align: center;
 		box-shadow: 6px 6px 10px #999999;
 		border: none;
+		margin-bottom: 1em;
+	}
+	
+	.textfield2 {
+		font-family: 'Pontano Sans', sans-serif;
+		height: 2em;
+		width: 16em;
+		border-radius: 8px;
+		text-align: center;
+		box-shadow: 6px 6px 10px #999999;
+		border: none;
+		margin-bottom: 0.8em;
 	}
 	
 	.button {
@@ -55,22 +67,75 @@
 		margin-bottom: 1em;
 	}
 	
+	#buttons {
+		margin-top: 7.1em;
+		margin-bottom: 0.5em;
+	}
+	
+	#buttons2 {
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+	}
+	
+	.switchLogin {
+		font-size: 12pt;
+	}
+	
+	#register {
+		display: none;
+	}
 	</style>
+	<script src="jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
-	<fieldset>
+
+	<script>
+		$(document).ready(function(){
+			$(".switch").hover(function() {
+				$(this).css("text-shadow","-1px 0 #ceaffd, 0 1px #ceaffd, 1px 0 #ceaffd, 0 -1px #ceaffd");
+				$(this).css("transition","filter 0.4s");
+			}, function() {
+				$(this).css("text-shadow", "none");
+				$(this).css("transition","filter 0.4s");
+			});
+			$("#switchRegister").click(function() {
+				$("#login").fadeOut(400);
+				$("#register").delay(400).fadeIn(400);
+			});
+			$("#switchLogin").click(function() {
+				$("#register").fadeOut(400);
+				$("#login").delay(400).fadeIn(400);
+			});
+		});
+	</script>
+
+	<fieldset id="login">
 		<form id="submission_form">
 			<div id="title">G2L Login Page</div>
 			<div class="divider">Username:<br/>
 			<input type="text" name="username" placeholder="8 - 20 letters" pattern=".{8,20}[A-Z a-z]" required class="textfield"></div>
 			<div class="divider">Password:<br/>
 			<input type="password" name="password" placeholder="8 - 20 letters OR numbers" pattern=".{8,20}[A-Z a-z 0-9]" required class="textfield"></div>
-			<div class="divider">Student Number:<br/>
-			<input type="text" name="studentNumber" placeholder="ex. A00809999" pattern=".{9}[A-Z a-z 0-9]" required class="textfield"></div>
-			<div class="divider">Course Program:<br/>
-			<input type="text" name="course" placeholder="ex. CST Diploma" class="textfield"></div>
-			<div class="divider"><input type="submit" class="button"> &nbsp; <input type="reset" class="button"></div>
+
+			<div id="buttons"><input type="submit" class="button"> &nbsp; <input type="reset" class="button"></div>
+			<span class="switch" id="switchRegister">New User? Sign Up!</span>
+	</fieldset>
+	
+	<fieldset id="register">
+		<form id="submission_form">
+			<div id="title">G2L Register Page</div>
+			<div>Username:<br/>
+			<input type="text" name="username" placeholder="8 - 20 letters" pattern=".{8,20}[A-Z a-z]" required class="textfield2"></div>
+			<div>Password:<br/>
+			<input type="password" name="password" placeholder="8 - 20 letters OR numbers" pattern=".{8,20}[A-Z a-z 0-9]" required class="textfield2"></div>
+			<div>Email:<br/>
+			<input type="text" name="email" placeholder="ex. MyEmail@gmail.com" class="textfield2"></div>
+			<div>Student Number:<br/>
+			<input type="text" name="studentNumber" placeholder="ex. A00809999" pattern=".{9}[A-Z a-z 0-9]" required class="textfield2"></div>
+
+			<div id="buttons2"><input type="submit" class="button"> &nbsp; <input type="reset" class="button"></div>
+			<span class="switch" id="switchLogin">Return to Login</span>
 	</fieldset>
 	
 </body>
