@@ -3,22 +3,32 @@
     <title>BCIT G2L Map</title>
 	<style>
 	  #map {
-      width: 98%;
-      float:right;
-      margin-right: 1%;
-	  height: 95vh;
+        width: 100%;
+        float:right;
+	    height: 100%;
       }
       #menu {
         float:left;
-        width: 20%;
-        height: 95vh;
+        width: calc(18% + 6pt);
+        height: calc(95vh - 29pt);
         background-color: purple;
+		margin-left: -6pt;
       }
 	  #border {
 	    background-color: white;
-	    width: 80%;
-	    height: 95vh;
+	    width: calc(82% + 6pt);
+	    height: calc(95vh - 29pt);
 	    float:right;
+		margin-right: -6pt;
+	  }
+	  #banner {
+	    width: calc(100% + 12pt);
+		background-color: #383838;
+		text-align: center;
+		height: 45pt;
+		margin-left: -6pt;
+		margin-right: -6pt;
+		margin-top: -6pt;
 	  }
       .item {
         font-weight: bold;
@@ -33,32 +43,84 @@
 		vertical-align: center;
 		text-align: left;
       }
+	  .sItem {
+        font-weight: bold;
+        font-size: 1%;
+		width: 100%;
+		background-color: purple;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		height: 1%;
+		border: none;
+		cursor: pointer;
+		vertical-align: center;
+		text-align: left;
+      }
 	  .icon {
 	    height: 20pt;
 		margin-right: 13pt;
 		margin-left: 13pt;
 		float: left;
 	  }
+	  #login {
+	    height: 25pt;
+		margin-right: 10pt;
+		margin-top: 10pt;
+		float: right;
+		cursor: pointer;
+	  }
+	  .sIcon {
+	    height: 1px;
+		margin-right: 13pt;
+		margin-left: 13pt;
+		float: left;
+	  }
 	  #top {
 	    text-align: center;
-		font-size: 28pt;
-		width: 100%;
+		font-size: 25pt;
+		font-weight: bold;
 		border: none;
-		background: grey;
-		height: 35pt
+		background: #383838;
+	    color: white;
+		cursor: pointer;
+		margin-top: 8pt;
 	  }
+	  #search {
+	    height: 1px;
+      }
 	</style>
   </head>
   <body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+	  $(document).ready(function() {
+  	    $("#s").mouseUp(function() {
+	      if($("#search").css("height") == "1px") {
+		    $("#search").css("height", "150pt")
+		  }
+	    }
+	  }
+	</script>
     <div>
+	    <div id="banner">
+		    <img src="./login.png" id="login">
+			<button id="top">G 2 L</button>
+		</div>
         <div id="menu">
 		  <div>
-		    <button id="top">G2L</button>
+            <button class="item" id="s"><img src="./search.png" class="icon">Search</button>
 		  </div>
-		  <div>
-            <button class="item"><img src="./search.png" class="icon">Search</button>
-		  </div>
-		  <br/>
+		  <div id = "search">
+		    <div>
+              <button class="sItem"><img src="./search.png" class="sIcon">Search</button>
+		    </div>
+			<div>
+              <button class="sItem"><img src="./search.png" class="sIcon">Search</button>
+		    </div>
+			<div>
+              <button class="sItem"><img src="./search.png" class="sIcon">Search</button>
+		    </div>
+	      </div>
           <div>
             <button class="item"><img src="./calendar.png" class="icon">Events</button>
 	      </div>
