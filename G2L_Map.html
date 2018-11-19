@@ -2,24 +2,25 @@
   <head>
     <title>BCIT G2L Map</title>
 	<style>
+	
+	body {
+	margin: 0px;
+	}
+		
 	  #map {
-      width: 98%;
+      width: 80%;
       float:right;
-      margin-right: 1%;
-	  height: 95vh;
+	  height: 40em;
+	  margin-top: 5em;
       }
       #menu {
         float:left;
         width: 20%;
-        height: 95vh;
+        height: 32em;
         background-color: purple;
+		margin-top: 5em;
       }
-	  #border {
-	    background-color: white;
-	    width: 80%;
-	    height: 95vh;
-	    float:right;
-	  }
+
       .item {
         font-weight: bold;
         font-size: 15pt;
@@ -45,13 +46,25 @@
 		width: 100%;
 		border: none;
 		background: grey;
-		height: 35pt
+		height: 35pt;
+	  }
+	  
+	  #banner {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 4em;
+		color: white;
+		background-color: black;
 	  }
 	</style>
   </head>
   <body>
+	<div id="banner">
+		Login
+	</div>
     <div>
-        <div id="menu">
+        <span id="menu">
 		  <div>
 		    <button id="top">G2L</button>
 		  </div>
@@ -62,10 +75,8 @@
           <div>
             <button class="item"><img src="./calendar.png" class="icon">Events</button>
 	      </div>
-        </div>
-        <div id="border">
+        </span>
           <img src="./map.png" id="map">
-        </div>
     </div>
   </body>
 </html>
