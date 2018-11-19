@@ -2,11 +2,6 @@
   <head>
     <title>BCIT G2L Map</title>
 	<style>
-	
-	body {
-	margin: 0px;
-	}
-		
 	  #map {
         width: 100%;
         float:right;
@@ -85,6 +80,10 @@
 		font-size: 25pt;
 		font-weight: bold;
 		border: none;
+		background: #383838;
+	    color: white;
+		cursor: pointer;
+		margin-top: 8pt;
 	  }
 	  #search {
 	    height: 1px;
@@ -125,8 +124,10 @@
           <div>
             <button class="item"><img src="./calendar.png" class="icon">Events</button>
 	      </div>
-        </span>
+        </div>
+        <div id="border">
           <img src="./map.png" id="map">
+        </div>
     </div>
   </body>
 </html>
