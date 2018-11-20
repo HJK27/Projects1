@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+    <style>
+        body {
+            background-image: url("bubble-2811093_1920.jpg");
+
+
+            background-size: cover;
+        }
+
+        table,
+        thead,
+        tbody,
+        tr,
+        td {
+            border: 1px solid black;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #navbar {
+            font-size: 30px;
+            color:orange;
+        }
+
+        #tablecontainer {}
+
+        #eventtable {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+
+            /*margin-left:15% ;*/
+
+            width: 80%;
+        }
+        #backspace{
+            float : left;
+            height:55px;
+            width:55px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div id="upperbody">
+            <nav id="navbar">
+                <img src = "backspace.png" id = "backspace" alt = "Backspace symbol">
+                <p id = "navtext">G2L</p>
+                
+            </nav>
+        </div>
+        <div id="tablecontainer">
+            <table id="eventtable">
+                <thead>
+                    <tr>
+                        <th>
+                            Event Name
+                        </th>
+                        <th>
+                            Event Description
+                        </th>
+                        <th>
+                            Date
+                        </th>
+                        <th>
+                            Location
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td>
+                                    Final exam terms (CST)
+                                </td>
+                                <td>
+                                    CST students have final exams
+                                </td>
+                                <td>
+                                    December 10th - 14th, 2018
+                                    <br/> Depends on the course
+                                </td>
+                                <td>
+                                    BCIT Recreational centre (Gym)
+                                </td>
+                            </tr>
+                    <tr>
+                        <td>
+                            Beer Party
+                        </td>
+                        <td>
+                            Drinking Beers and having fun
+                        </td>
+                        <td>
+                            December 15, 2018
+                            <br />13:00 ~ 23:00
+                        </td>
+                        <td>
+                            SW05 #320
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Basketball tournament
+                        </td>
+                        <td>
+                            Basektball players who signed up for the tournament
+                            will play as a team
+                        </td>
+                        <td>
+                            January 20th, 2018
+                            <br />14:00 ~ 16:00
+                        </td>
+                        <td>
+                            BCIT Recreational centre
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Coding for all meting (CST)
+                        </td>
+                        <td>
+                            People who are in CST will get helpful information
+                            for CST terms
+                        </td>
+                        <td>
+                            January 22th, 2018
+                            <br />15:00 ~ 17:30
+                        </td>
+                        <td>
+                            SW05 #312
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Pets day
+                        </td>
+                        <td>
+                            People who love pets should come to see pets
+                            to distress!
+                        </td>
+                        <td>
+                            January 23th, 2018
+                            <br />12:00 ~ 13:30
+                        </td>
+                        <td>
+                            SE02 Main hall
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                Triple O's Tuesday! 
+                            </td>
+                            <td>
+                                Come to Triple O's and buy burgers with half
+                                of the regular price! 
+                            </td>
+                            <td>
+                                January 29th, 2018
+                                <br/>All day until close
+                            </td>
+                            <td>
+                                SE02 nearby Main Hall
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
 </body>
+
 </html>
