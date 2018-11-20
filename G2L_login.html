@@ -18,7 +18,7 @@
 	}
 
 	fieldset {
-		margin-top: 2em;
+		margin-top: 0.8em;
 		text-align: center;
 		font-family: 'Oswald', sans-serif;
 		font-size: 15pt;
@@ -84,6 +84,36 @@
 	#register {
 		display: none;
 	}
+	
+	#top {
+	    text-align: center;
+		font-size: 25pt;
+		font-weight: bold;
+		border: none;
+		background: transparent;
+	    color: white;
+		cursor: pointer;
+		margin-top: 2pt;
+		margin-left: 50pt;
+	}
+	
+	#banner {
+	    width: calc(100% + 12pt);
+		background-color: #404040;
+		<!--text-align: center;-->
+		height: 45pt;
+		margin-left: -6pt;
+		margin-right: -6pt;
+		margin-top: -6pt;
+	}
+	
+	#login {
+	    height: 20pt;
+		margin-right: 10pt;
+		margin-top: 7pt;
+		float: right;
+		cursor: pointer;
+	}
 	</style>
 	<script src="jquery-3.3.1.min.js"></script>
 </head>
@@ -100,17 +130,22 @@
 				$(this).css("transition","filter 0.4s");
 			});
 			$("#switchRegister").click(function() {
-				$("#login").fadeOut(400);
+				$("#userLogin").fadeOut(400);
 				$("#register").delay(400).fadeIn(400);
 			});
 			$("#switchLogin").click(function() {
 				$("#register").fadeOut(400);
-				$("#login").delay(400).fadeIn(400);
+				$("#userLogin").delay(400).fadeIn(400);
 			});
 		});
 	</script>
 
-	<fieldset id="login">
+	<div id="banner">
+		<img src="./login.png" id="login">
+		<button id="top">G 2 L</button>
+	</div>
+	
+	<fieldset id="userLogin">
 		<form id="submission_form">
 			<div id="title">G2L Login Page</div>
 			<div class="divider">Username:<br/>
