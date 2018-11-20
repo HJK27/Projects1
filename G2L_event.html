@@ -24,16 +24,33 @@
             border: 1px solid black;
         }
 
-        .container {
-            text-align: center;
-        }
+
 
         #navbar {
-            font-size: 30px;
-            color:orange;
-        }
 
-        #tablecontainer {}
+            text-align: center;
+            font-size: 25pt;
+            font-weight: bold;
+            border: none;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            margin-top: 2pt;
+            margin-left: 50pt;
+
+        }
+        #banner {
+			width: calc(100% + 12pt);
+			background-color: #404040;
+			height: 30pt;
+			margin-left: -6pt;
+			margin-right: -6pt;
+			margin-top: -6pt;
+		}
+
+        #tablecontainer {
+            margin-top:50px;
+        }
 
         #eventtable {
             margin-left: auto;
@@ -44,58 +61,101 @@
 
             width: 80%;
         }
-        #backspace{
-            float : left;
-            height:55px;
-            width:55px;
+
+        #backspace {
+            float: left;
+            height: 55px;
+            width: 55px;
+        }
+
+        #upperbody {
+            width: calc(100% + 12pt);
+            background-color: #404040;
+            height: 45pt;
+            margin-left: -6pt;
+            margin-right: -6pt;
+            margin-top: -6pt;
+        }
+        #top {
+			text-align: center;
+			font-size: 25pt;
+			font-weight: bold;
+			border: none;
+			background: transparent;
+			color: white;
+			cursor: pointer;
+			margin-top: 2pt;
+			margin-left: 50pt;
+        }
+        #login {
+			height: 20pt;
+			margin-right: 10pt;
+			margin-top: 7pt;
+			float: right;
+			cursor: pointer;
+        }
+        #th1{
+            background-color:lightskyblue;
+        }
+        #th2{
+            background-color:lightblue;
+        }
+        #th3{
+            background-color:lightgreen;
+        }
+        #th4{
+            background-color:orange;
+        }
+        .tr1{
+            background-color:#9ED9EB;
+        }
+        .tr2{
+            background-color:#CEE8F0;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div id="upperbody">
-            <nav id="navbar">
-                <img src = "backspace.png" id = "backspace" alt = "Backspace symbol">
-                <p id = "navtext">G2L</p>
-                
-            </nav>
-        </div>
+        <div id="banner">
+			<img src="./login.png" id="login">
+			<button id="top">G 2 L</button>
+		</div>
         <div id="tablecontainer">
             <table id="eventtable">
                 <thead>
                     <tr>
-                        <th>
+                        <th id = "th1">
                             Event Name
                         </th>
-                        <th>
+                        <th id = "th2">
                             Event Description
                         </th>
-                        <th>
+                        <th id = "th3">
                             Date
                         </th>
-                        <th>
+                        <th id = "th4">
                             Location
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                        <tr>
-                                <td>
-                                    Final exam terms (CST)
-                                </td>
-                                <td>
-                                    CST students have final exams
-                                </td>
-                                <td>
-                                    December 10th - 14th, 2018
-                                    <br/> Depends on the course
-                                </td>
-                                <td>
-                                    BCIT Recreational centre (Gym)
-                                </td>
-                            </tr>
-                    <tr>
+                    <tr class ="tr1">
+                        <td>
+                            Final exam terms (CST)
+                        </td>
+                        <td>
+                            CST students have final exams
+                        </td>
+                        <td>
+                            December 10th - 14th, 2018
+                            <br /> Depends on the course
+                        </td>
+                        <td>
+                            BCIT Recreational centre (Gym)
+                        </td>
+                    </tr>
+                    <tr class ="tr2">
                         <td>
                             Beer Party
                         </td>
@@ -110,7 +170,7 @@
                             SW05 #320
                         </td>
                     </tr>
-                    <tr>
+                    <tr class = "tr1">
                         <td>
                             Basketball tournament
                         </td>
@@ -126,7 +186,7 @@
                             BCIT Recreational centre
                         </td>
                     </tr>
-                    <tr>
+                    <tr class = "tr2">
                         <td>
                             Coding for all meting (CST)
                         </td>
@@ -142,7 +202,7 @@
                             SW05 #312
                         </td>
                     </tr>
-                    <tr>
+                    <tr class = "tr1">
                         <td>
                             Pets day
                         </td>
@@ -158,22 +218,22 @@
                             SE02 Main hall
                         </td>
                     </tr>
-                    <tr>
-                            <td>
-                                Triple O's Tuesday! 
-                            </td>
-                            <td>
-                                Come to Triple O's and buy burgers with half
-                                of the regular price! 
-                            </td>
-                            <td>
-                                January 29th, 2018
-                                <br/>All day until close
-                            </td>
-                            <td>
-                                SE02 nearby Main Hall
-                            </td>
-                        </tr>
+                    <tr class = "tr2">
+                        <td>
+                            Triple O's Tuesday!
+                        </td>
+                        <td>
+                            Come to Triple O's and buy burgers with half
+                            of the regular price!
+                        </td>
+                        <td>
+                            January 29th, 2018
+                            <br />All day until close
+                        </td>
+                        <td>
+                            SE02 nearby Main Hall
+                        </td>
+                    </tr>
                 </tbody>
             </table>
 
