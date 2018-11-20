@@ -9,22 +9,24 @@
       }
       #menu {
         float:left;
-        width: calc(18% + 6pt);
-        height: calc(95vh - 29pt);
-        background-image: url("./bubble.png");
-		margin-left: -6pt;
+        width: 20%;
+        height: calc((95vh - 29pt) / 2);
+        background-color: MediumPurple;
+		margin-left: 15pt;
+		margin-top: 15pt;
       }
 	  #border {
-	    background-color: white;
-	    width: calc(82% + 6pt);
-	    height: calc(95vh - 29pt);
-	    float:right;
+	    background-image: url("./map.png");
+	    width: calc(100% + 12pt);
+	    height: calc(95vh - 20pt);
 		margin-right: -6pt;
+		margin-left: -6pt;
+		background-repeat: no-repeat;
+		background-size: cover;
 	  }
 	  #banner {
 	    width: calc(100% + 12pt);
 		background-color: #404040;
-		<!--text-align: center;-->
 		height: 45pt;
 		margin-left: -6pt;
 		margin-right: -6pt;
@@ -107,7 +109,8 @@
 		    <img src="./login.png" id="login">
 			<button id="top">G 2 L</button>
 		</div>
-        <div id="menu">
+        <div id="border">
+		  <div id="menu">
 		  <div>
             <button class="item" id="s"><img src="./search.png" class="icon">Search</button>
 		  </div>
@@ -126,9 +129,7 @@
             <button class="item"><img src="./calendar.png" class="icon">Events</button>
 	      </div>
         </div>
-        <div id="border">
-          <img src="./map.png" id="map">
-        </div>
+      </div>
     </div>
   </body>
 </html>
