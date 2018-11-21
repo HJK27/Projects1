@@ -10,7 +10,7 @@
       #menu {
         float:left;
         width: 20%;
-        height: calc((95vh - 29pt) / 1.8);
+        height: 210pt;
         background-color: MediumPurple;
 		margin-left: 15pt;
 		margin-top: 15pt;
@@ -97,16 +97,28 @@
 	</script>
     <script>
 	  $(document).ready(function(){
+	    var expand = false;
   	    $("#s").click(function() {
 	      $("#search").animate({
 			height: "toggle"
-		  })
+		  });
 		  $(".sIcon").animate({
 		    height: "toggle"
-		  })
+		  });
 		  $(".sItem").animate({
 			height: "toggle"
 		  });
+		  if (expand == false) {
+		    $("#menu").animate({
+		      height: "210pt"
+		    });
+			expand = true;
+		  }else if (expand == true) {
+		    $("#menu").animate({
+		      height: "85pt"
+		    });
+			expand = false;
+		  }
 	    });
 		$("#search").animate({
 			height: "toggle"
@@ -116,6 +128,9 @@
 		  })
 		  $(".sItem").animate({
 			height: "toggle"
+		  })
+		  $("#menu").animate({
+		    height: "85pt"
 		  });
 	  });
 	</script>
