@@ -212,7 +212,11 @@
 			<div class="item8">8</div>
 			<div class="item9">
 			    <img src="./fac_i.png" class="fac">
-			    <div class="popup" id="tim"></div>
+			    <div class="popup" id="fac1">
+				  <p class="name">Name</p>
+				  <p class="oh">Open</p>
+				  <p class="ch">Close</p>
+				</div>
 		    </div>
 			<div class="item10">10</div>
 			<div class="item11">11</div>
@@ -245,14 +249,16 @@
       </div>
     </div>
 	<script>
-      var tim = document.getElementById('tim');
-	  var timN = document.createElement("p");
-	  tim.appendChild(timN);
-	  timN.innerText = "test";
+      var f1 = document.getElementById('fac1');
+	  var f1c = f1.children;
       var fac = firebase.database().ref().child('facilities');
-      var facTH = fac.child('th');
-	  var THName = facTH.child('Name');
-	  //THName.on('value', snap => timN.innerText = snap.val());
-    </script>
+      var fac1 = fac.child('fac1');
+	  var fac1N = fac1.child('Name');
+	  var fac1OH = fac1.child('OpeningHours');
+	  var fac1CH = fac1.child('ClosingHours');
+	  fac1N.on('value', snap => f1c[0].innerText = "Name: " + snap.val());
+	  fac1OH.on('value', snap => f1c[1].innerText = "Opens: " + snap.val());
+	  fac1CH.on('value', snap => f1c[2].innerText = "Closes: " + snap.val());
+	</script>
   </body>
 </html>
