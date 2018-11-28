@@ -114,7 +114,7 @@
 	  .grid-container {
 		display: grid;
 		grid-template-columns: auto auto auto auto auto auto;
-		color: red;
+		color: black;
 		text-align: center;
 		margin-top: -32em;
 		margin-left: 13em;
@@ -124,10 +124,40 @@
 	    height: 50pt;
 		clip-path: circle(50%);
 		shape-outside: circle(50%);
+		margin: 0 auto;
+		cursor: pointer;
+		display: none;
+		position: absolute;
 	  }
 	  .popup {
-	    margin-top: -135pt;
+	    margin-top: -98pt;
+		margin-left: 10pt;
 		background-color: white;
+		position: absolute;
+		width: 150pt;
+	  }
+	  .inp {
+	    display: none;
+	  }
+	  .cfi {
+	    height: 20pt;
+		clip-path: circle(50%);
+		shape-outside: circle(50%);
+		margin-left: 37pt;
+		margin-top: -8pt;
+		position: absolute;
+		cursor: pointer;
+		display: none;
+	  }
+	  .cp {
+	    height: 20pt;
+		clip-path: circle(50%);
+		shape-outside: circle(50%);
+		position: absolute;
+		margin-left: 65pt;
+		margin-top: -10pt;
+		cursor: pointer;
+		display: none;
 	  }
 	</style>
   </head>
@@ -171,6 +201,93 @@
 		  $("#menu").animate({
 		    height: "85pt"
 		  });
+		  $("#f").click(function() {
+	        $(".fac").css({
+	  		  "display": "inline-block"
+		    });
+		    $(".cfi").css({
+		      "display": "inline-block"
+		    });
+		  });
+		  $("#f1c").click(function() {
+		    $("#f1c").css({
+	  		  "display": "none"
+		    });
+		    $("#f1").css({
+		      "display": "none"
+		    });
+			$("#fac1").css({
+	  		  "display": "none"
+		    });
+		    $(".fp1").css({
+	  		  "display": "none"
+		    });
+			$("#f1p").css({
+	  		  "display": "none"
+		    });
+		  });
+		  $("#f1").click(function() {
+		    $("#fac1").css({
+	  		  "display": "block"
+		    });
+		    $(".fp1").css({
+	  		  "display": "block"
+		    });
+			$("#f1p").css({
+	  		  "display": "inline-block"
+		    });
+		  });
+		  $("#f1p").click(function() {
+		    $("#fac1").css({
+	  		  "display": "none"
+		    });
+		    $(".fp1").css({
+	  		  "display": "none"
+		    });
+			$("#f1p").css({
+	  		  "display": "none"
+		    });
+		  });
+		  
+		  $("#f2c").click(function() {
+		    $("#f2c").css({
+	  		  "display": "none"
+		    });
+		    $("#f2").css({
+		      "display": "none"
+		    });
+			$("#fac2").css({
+	  		  "display": "none"
+		    });
+		    $(".fp2").css({
+	  		  "display": "none"
+		    });
+			$("#f2p").css({
+	  		  "display": "none"
+		    });
+		  });
+		  $("#f2").click(function() {
+		    $("#fac2").css({
+	  		  "display": "block"
+		    });
+		    $(".fp2").css({
+	  		  "display": "block"
+		    });
+			$("#f2p").css({
+	  		  "display": "inline-block"
+		    });
+		  });
+		  $("#f2p").click(function() {
+		    $("#fac2").css({
+	  		  "display": "none"
+		    });
+		    $(".fp2").css({
+	  		  "display": "none"
+		    });
+			$("#f2p").css({
+	  		  "display": "none"
+		    });
+		  });
 	  });
 	</script>
     <div>
@@ -187,13 +304,13 @@
 		  </div>
 		  <div id = "search">
 		    <div>
-              <button class="sItem"><img src="./course.png" class="sIcon">Courses</button>
+              <button class="sItem" id="c"><img src="./course.png" class="sIcon">Courses</button>
 		    </div>
 			<div>
-              <button class="sItem"><img src="./fac.png" class="sIcon">Facilities</button>
+              <button class="sItem" id="f"><img src="./fac.png" class="sIcon">Facilities</button>
 		    </div>
 			<div>
-              <button class="sItem"><img src="./park.png" class="sIcon">Parking Lots</button>
+              <button class="sItem" id="p"><img src="./park.png" class="sIcon">Parking Lots</button>
 		    </div>
 	      </div>
           <div>
@@ -211,11 +328,13 @@
 			<div class="item7">7</div>
 			<div class="item8">8</div>
 			<div class="item9">
-			    <img src="./fac_i.png" class="fac">
-			    <div class="popup" id="fac1">
-				  <p class="name">Name</p>
-				  <p class="oh">Open</p>
-				  <p class="ch">Close</p>
+			    <img src="./fac_i.png" class="fac" id="f1">
+				<img src="./x_i.png" class="cfi" id="f1c">
+			    <div class="popup inp" id="fac1">
+				  <img src="./x_i.png" class="cp" id="f1p">
+				  <p class="name inp fp1">Name</p>
+				  <p class="oh inp fp1">Open</p>
+				  <p class="ch inp fp1">Close</p>
 				</div>
 		    </div>
 			<div class="item10">10</div>
@@ -227,7 +346,16 @@
 			<div class="item16">16</div>
 			<div class="item17">17</div>
 			<div class="item18">18</div>
-			<div class="item19">19</div>
+			<div class="item19">
+			  <img src="./fac_i.png" class="fac" id="f2">
+				<img src="./x_i.png" class="cfi" id="f2c">
+			    <div class="popup inp" id="fac2">
+				  <img src="./x_i.png" class="cp" id="f2p">
+				  <p class="name inp fp2">Name</p>
+				  <p class="oh inp fp2">Open</p>
+				  <p class="ch inp fp2">Close</p>
+				</div>
+			</div>
 			<div class="item20">20</div>
 			<div class="item21">21</div>
 			<div class="item22">22</div>
@@ -256,9 +384,18 @@
 	  var fac1N = fac1.child('Name');
 	  var fac1OH = fac1.child('OpeningHours');
 	  var fac1CH = fac1.child('ClosingHours');
-	  fac1N.on('value', snap => f1c[0].innerText = "Name: " + snap.val());
-	  fac1OH.on('value', snap => f1c[1].innerText = "Opens: " + snap.val());
-	  fac1CH.on('value', snap => f1c[2].innerText = "Closes: " + snap.val());
+	  fac1N.on('value', snap => f1c[1].innerText = "Name: " + snap.val());
+	  fac1OH.on('value', snap => f1c[2].innerText = "Opens: " + snap.val());
+	  fac1CH.on('value', snap => f1c[3].innerText = "Closes: " + snap.val());
+	  var f2 = document.getElementById('fac2');
+	  var f2c = f2.children;
+      var fac2 = fac.child('fac2');
+	  var fac2N = fac2.child('Name');
+	  var fac2OH = fac2.child('OpeningHours');
+	  var fac2CH = fac2.child('ClosingHours');
+	  fac2N.on('value', snap => f2c[1].innerText = "Name: " + snap.val());
+	  fac2OH.on('value', snap => f2c[2].innerText = "Opens: " + snap.val());
+	  fac2CH.on('value', snap => f2c[3].innerText = "Closes: " + snap.val());
 	</script>
   </body>
 </html>
