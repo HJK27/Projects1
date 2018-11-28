@@ -1,5 +1,18 @@
 <!DOCTYPE html>
   <head>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC47iFaCxK5f2ssH6ejfDKEbYs-OmpTwkM",
+        authDomain: "database-demo-4fc5b.firebaseapp.com",
+        databaseURL: "https://database-demo-4fc5b.firebaseio.com",
+        projectId: "database-demo-4fc5b",
+        storageBucket: "database-demo-4fc5b.appspot.com",
+        messagingSenderId: "569918101693"
+      };
+      firebase.initializeApp(config);
+    </script>
     <title>BCIT G2L Map</title>
 	<style>
 	  #map {
@@ -100,6 +113,15 @@
 		margin-left: 13em;
 		height: 32em;
 	  }
+	  .fac {
+	    height: 50pt;
+		clip-path: circle(50%);
+		shape-outside: circle(50%);
+	  }
+	  .popup {
+	    margin-top: -135pt;
+		background-color: white;
+	  }
 	</style>
   </head>
   <body>
@@ -180,7 +202,10 @@
 			<div class="item6">6</div>
 			<div class="item7">7</div>
 			<div class="item8">8</div>
-			<div class="item9">9</div>
+			<div class="item9">
+			    <img src="./fac_i.png" class="fac">
+			    <div class="popup" id="tim"></div>
+		    </div>
 			<div class="item10">10</div>
 			<div class="item11">11</div>
 			<div class="item12">12</div>
@@ -211,5 +236,15 @@
 		</div>
       </div>
     </div>
+	<script>
+      var tim = document.getElementById('tim');
+	  var timN = document.createElement("p");
+	  tim.appendChild(timN);
+	  timN.innerText = "test";
+      var fac = firebase.database().ref().child('facilities');
+      var facTH = fac.child('th');
+	  var THName = facTH.child('Name');
+	  //THName.on('value', snap => timN.innerText = snap.val());
+    </script>
   </body>
 </html>
