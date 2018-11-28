@@ -79,6 +79,7 @@
 	
 	.switch {
 		font-size: 12pt;
+		cursor: pointer;
 	}
 	
 	#register {
@@ -100,14 +101,21 @@
 	#banner {
 	    width: calc(100% + 12pt);
 		background-color: #404040;
-		<!--text-align: center;-->
-		height: 45pt;
+		
 		margin-left: -6pt;
 		margin-right: -6pt;
 		margin-top: -6pt;
 	}
 	
 	#login {
+	    height: 20pt;
+		margin-right: 10pt;
+		margin-top: 7pt;
+		float: right;
+		cursor: pointer;
+	}
+	
+	#logout {
 	    height: 20pt;
 		margin-right: 10pt;
 		margin-top: 7pt;
@@ -139,8 +147,25 @@
 			});
 		});
 	</script>
+	
+	<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+		apiKey: "AIzaSyBkvRjIGfIVUMM1m4kBXxL53XuQ81BIi3w",
+		authDomain: "g2l-database.firebaseapp.com",
+		databaseURL: "https://g2l-database.firebaseio.com",
+		projectId: "g2l-database",
+		storageBucket: "g2l-database.appspot.com",
+		messagingSenderId: "579409049990"
+	 };
+	 firebase.initializeApp(config);
+	</script>
+		
+	<script src="index.js"></script>
 
 	<div id="banner">
+		<img src="./logout.png" id="logout" onclick="logout()">
 		<a href="./G2L_login.html"><img src="./login.png" id="login"></a>
 		<a href="./G2L_Map.html"><button id="top">G 2 L</button></a>
 	</div>
@@ -148,12 +173,12 @@
 	<fieldset id="userLogin">
 		<form id="submission_form">
 			<div id="title">G2L Login Page</div>
-			<div class="divider">Username:<br/>
-			<input type="text" name="username" placeholder="8 - 20 letters" pattern=".{8,20}[A-Z a-z]" required class="textfield"></div>
+			<div>Email:<br/>
+			<input type="text" name="email" placeholder="ex. MyEmail@gmail.com" required class="textfield" id="email_field"></div>
 			<div class="divider">Password:<br/>
-			<input type="password" name="password" placeholder="8 - 20 letters OR numbers" pattern=".{8,20}[A-Z a-z 0-9]" required class="textfield"></div>
+			<input type="password" name="password" placeholder="myPassword123" required class="textfield" id="password_field"></div>
 
-			<div id="buttons"><input type="submit" class="button"> &nbsp; <input type="reset" class="button"></div>
+			<div id="buttons"><input type="submit" class="button" onclick="login()"> &nbsp; <input type="reset" class="button"></div>
 			<span class="switch" id="switchRegister">New User? Sign Up!</span>
 	</fieldset>
 	
@@ -173,5 +198,6 @@
 			<span class="switch" id="switchLogin">Return to Login</span>
 	</fieldset>
 	
+	<span id="welcome">Welcome User!</span>
 </body>
 </html>
