@@ -72,11 +72,6 @@
 		margin-bottom: 0.5em;
 	}
 	
-	#buttons2 {
-		margin-top: 1em;
-		margin-bottom: 0.5em;
-	}
-	
 	.switch {
 		font-size: 12pt;
 		cursor: pointer;
@@ -122,6 +117,16 @@
 		float: right;
 		cursor: pointer;
 	}
+	
+	#welcome {
+		float: left;
+		position: relative;
+		top: 3.5em;
+		left: 23%;
+		font-family: 'Lalezar', cursive;
+		font-size: 40pt;
+	}
+	
 	</style>
 	<script src="jquery-3.3.1.min.js"></script>
 </head>
@@ -162,13 +167,15 @@
 	 firebase.initializeApp(config);
 	</script>
 		
-	<script src="index.js"></script>
+	<script src="user_login_index.js"></script>
 
 	<div id="banner">
 		<img src="./logout.png" id="logout" onclick="logout()">
 		<a href="./G2L_login.html"><img src="./login.png" id="login"></a>
 		<a href="./G2L_Map.html"><button id="top">G 2 L</button></a>
 	</div>
+	
+	<div id="welcome"></div>
 	
 	<fieldset id="userLogin">
 		<form id="submission_form">
@@ -185,19 +192,17 @@
 	<fieldset id="register">
 		<form id="submission_form">
 			<div id="title">G2L Register Page</div>
-			<div>Username:<br/>
-			<input type="text" name="username" placeholder="8 - 20 letters" pattern=".{8,20}[A-Z a-z]" required class="textfield2"></div>
-			<div>Password:<br/>
-			<input type="password" name="password" placeholder="8 - 20 letters OR numbers" pattern=".{8,20}[A-Z a-z 0-9]" required class="textfield2"></div>
+			<!--<div>Username:<br/>
+			<input type="text" name="username" placeholder="8 - 20 letters" pattern=".{8,20}[A-Z a-z]" required class="textfield2"></div>-->
 			<div>Email:<br/>
-			<input type="text" name="email" placeholder="ex. MyEmail@gmail.com" class="textfield2"></div>
-			<div>Student Number:<br/>
-			<input type="text" name="studentNumber" placeholder="ex. A00809999" pattern=".{9}[A-Z a-z 0-9]" required class="textfield2"></div>
+			<input type="text" name="email" placeholder="ex. MyEmail@gmail.com" class="textfield2" id="new_email_field"></div>
+			<div>Password:<br/>
+			<input type="password" name="password" placeholder="myPassword123" required class="textfield2" id="new_password_field"></div>
+			<!--<div>Student Number:<br/>
+			<input type="text" name="studentNumber" placeholder="ex. A00809999" pattern=".{9}[A-Z a-z 0-9]" required class="textfield2"></div>-->
 
-			<div id="buttons2"><input type="submit" class="button"> &nbsp; <input type="reset" class="button"></div>
+			<div id="buttons"><input type="submit" class="button" onclick="newUser()"> &nbsp; <input type="reset" class="button"></div>
 			<span class="switch" id="switchLogin">Return to Login</span>
 	</fieldset>
-	
-	<span id="welcome">Welcome User!</span>
 </body>
 </html>
