@@ -15,11 +15,10 @@
     </script>
     <title>BCIT G2L Map</title>
 	<style>
-	  #map {
-        width: 100%;
-        float:right;
-	    height: 100%;
-      }
+	  body {
+	    margin: 0;
+		height: 100vh;
+	  }
       #menu {
         float:left;
         width: 20%;
@@ -31,19 +30,14 @@
       }
 	  #border {
 	    background-image: url("./images/map.png");
-	    width: calc(100% + 12pt);
-	    height: calc(95vh - 20pt);
-		margin-right: -6pt;
-		margin-left: -6pt;
+	    width: 100%;
+	    height: calc(100vh - 47.6667px);
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: 100% 100%;
 	  }
 	  #banner {
-	    width: calc(100% + 12pt);
+	    width: 100%;
 		background-color: #404040;
-		margin-left: -6pt;
-		margin-right: -6pt;
-		margin-top: -6pt;
 	  }
       .item {
         font-weight: bold;
@@ -545,49 +539,11 @@
 			<div class="item2"></div>
 			<div class="item3"></div>  
 			<div class="item4"></div>
-			<div class="item5"></div>
+			<div class="item5">
+			</div>
 			<div class="item6"></div>
 			<div class="item7"></div>
-			<div class="item8"></div>
-			<div class="item9">
-			    <img src="./images/fac_i.png" class="fac" id="f1">
-				<img src="./images/x_i.png" class="cfi" id="f1c">
-			    <div class="popup inp" id="fac1">
-				  <img src="./images/x_i.png" class="cp" id="f1p">
-				  <p class="name inp fp1">Name</p>
-				  <p class="oh inp fp1">Open</p>
-				  <p class="ch inp fp1">Close</p>
-				</div>
-		    </div>
-			<div class="item10">
-			  <img src="./images/course_i.png" class="cor" id="c1">
-				<img src="./images/x_i.png" class="cci" id="c1c">
-			    <div class="popup inp" id="cor1">
-				  <img src="./images/x_i.png" class="cp" id="c1p">
-				  <p class="name inp cp1">Name</p>
-				  <p class="num inp cp1">Course Num</p>
-				  <p class="prof inp cp1">Prof</p>
-			  </div>
-			</div>
-			<div class="item11"></div>
-			<div class="item12"></div>
-			<div class="item13">
-			</div>  
-			<div class="item14">
-			  <img src="./images/park_i.png" class="par" id="p2">
-				<img src="./images/x_i.png" class="cpi" id="p2c">
-			    <div class="popup inp" id="par2">
-				  <img src="./images/x_i.png" class="cp" id="p2p">
-				  <p class="fee inp pp2">Fee</p>
-				  <p class="gt inp pp2">Guest</p>
-				  <p class="sp inp pp2">Space</p>
-				</div>
-			</div>
-			<div class="item15"></div>
-			<div class="item16"></div>
-			<div class="item17"></div>
-			<div class="item18"></div>
-			<div class="item19">
+			<div class="item8">
 			  <img src="./images/fac_i.png" class="fac" id="f2">
 				<img src="./images/x_i.png" class="cfi" id="f2c">
 			    <div class="popup inp" id="fac2">
@@ -597,30 +553,19 @@
 				  <p class="ch inp fp2">Close</p>
 				</div>
 			</div>
-			<div class="item20"></div>
-			<div class="item21"></div>
-			<div class="item22"></div>
-			<div class="item23"></div>  
-			<div class="item24"></div>
-			<div class="item25"></div>
-			<div class="item26"></div>
-			<div class="item27"></div>
-			<div class="item28">
-			  <img src="./images/park_i.png" class="par" id="p1">
-				<img src="./images/x_i.png" class="cpi" id="p1c">
-			    <div class="popup inp" id="par1">
-				  <img src="./images/x_i.png" class="cp" id="p1p">
-				  <p class="fee inp pp1">Fee</p>
-				  <p class="gt inp pp1">Guest</p>
-				  <p class="sp inp pp1">Space</p>
-				</div>
-			</div>  
-			<div class="item29">
+			<div class="item9">
 		    </div>
-			<div class="item30">
+			<div class="item10">
+			    <img src="./images/fac_i.png" class="fac" id="f1">
+				<img src="./images/x_i.png" class="cfi" id="f1c">
+			    <div class="popup inp" id="fac1">
+				  <img src="./images/x_i.png" class="cp" id="f1p">
+				  <p class="name inp fp1">Name</p>
+				  <p class="oh inp fp1">Open</p>
+				  <p class="ch inp fp1">Close</p>
+				</div>
 			</div>
-			<div class="item31"></div>
-			<div class="item32">
+			<div class="item11">
 			  <img src="./images/course_i.png" class="cor" id="c2">
 				<img src="./images/x_i.png" class="cci" id="c2c">
 			    <div class="popup inp" id="cor2">
@@ -629,6 +574,60 @@
 				  <p class="num inp cp2">Course Num</p>
 				  <p class="prof inp cp2">Prof</p>
 				</div>
+			</div>
+			<div class="item12"></div>
+			<div class="item13">
+			</div>  
+			<div class="item14">
+			</div>
+			<div class="item15">
+			  <img src="./images/park_i.png" class="par" id="p2">
+				<img src="./images/x_i.png" class="cpi" id="p2c">
+			    <div class="popup inp" id="par2">
+				  <img src="./images/x_i.png" class="cp" id="p2p">
+				  <p class="fee inp pp2">Fee</p>
+				  <p class="gt inp pp2">Guest</p>
+				  <p class="sp inp pp2">Space</p>
+				</div>
+			</div>
+			<div class="item16"></div>
+			<div class="item17"></div>
+			<div class="item18"></div>
+			<div class="item19">
+			</div>
+			<div class="item20"></div>
+			<div class="item21"></div>
+			<div class="item22"></div>
+			<div class="item23">
+			  <img src="./images/course_i.png" class="cor" id="c1">
+				<img src="./images/x_i.png" class="cci" id="c1c">
+			    <div class="popup inp" id="cor1">
+				  <img src="./images/x_i.png" class="cp" id="c1p">
+				  <p class="name inp cp1">Name</p>
+				  <p class="num inp cp1">Course Num</p>
+				  <p class="prof inp cp1">Prof</p>
+			  </div>
+			</div>  
+			<div class="item24"></div>
+			<div class="item25"></div>
+			<div class="item26"></div>
+			<div class="item27"></div>
+			<div class="item28">
+			</div>  
+			<div class="item29">
+			  <img src="./images/park_i.png" class="par" id="p1">
+				<img src="./images/x_i.png" class="cpi" id="p1c">
+			    <div class="popup inp" id="par1">
+				  <img src="./images/x_i.png" class="cp" id="p1p">
+				  <p class="fee inp pp1">Fee</p>
+				  <p class="gt inp pp1">Guest</p>
+				  <p class="sp inp pp1">Space</p>
+				</div>
+		    </div>
+			<div class="item30">
+			</div>
+			<div class="item31"></div>
+			<div class="item32">
 			</div>
 			<div class="item33"></div>
 			<div class="item34"></div>
