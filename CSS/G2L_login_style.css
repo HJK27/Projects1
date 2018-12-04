@@ -1,0 +1,126 @@
+	@import url('https://fonts.googleapis.com/css?family=Oswald|Lalezar|Pontano+Sans');
+	
+	body {
+		background-image: url("../images/bubble-2811093_1920.jpg");
+	}
+	
+	#title {
+		margin-top: 0.5em;
+		font-family: 'Lalezar', cursive;
+		font-size: 30pt;
+		text-align: center;
+	}
+
+	fieldset {
+		margin-top: 0.8em;
+		text-align: center;
+		font-family: 'Oswald', sans-serif;
+		font-size: 15pt;
+		background-color: rgb(248,248,255, 0.7);
+		border: none;
+		border-radius: 20px;
+		margin-left: 22.5em;
+		margin-right: 22.5em;
+		height: 24em;
+		box-shadow: 6px 6px 10px #999999;
+	}
+	
+	.textfield {
+		font-family: 'Pontano Sans', sans-serif;
+		height: 2em;
+		width: 16em;
+		border-radius: 8px;
+		text-align: center;
+		box-shadow: 6px 6px 10px #999999;
+		border: none;
+		margin-bottom: 1em;
+	}
+	
+	.textfield2 {
+		font-family: 'Pontano Sans', sans-serif;
+		height: 2em;
+		width: 16em;
+		border-radius: 8px;
+		text-align: center;
+		box-shadow: 6px 6px 10px #999999;
+		border: none;
+		margin-bottom: 0.8em;
+	}
+	
+	.button {
+		color: white;
+		background-color: #9d60fb;
+		font-family: 'Oswald', sans-serif;
+		font-size: 14pt;
+		padding: 0.2em 0.8em;
+		border-radius: 20px;
+		border: none;
+	}
+	
+	.divider {
+		margin-bottom: 1em;
+	}
+	
+	#buttons {
+		margin-top: 7.1em;
+		margin-bottom: 0.5em;
+	}
+	
+	.switch {
+		font-size: 12pt;
+		cursor: pointer;
+	}
+	
+	#register {
+		display: none;
+	}
+	
+	#top {
+	    text-align: center;
+		font-size: 25pt;
+		font-weight: bold;
+		border: none;
+		background: transparent;
+	    color: white;
+		cursor: pointer;
+		margin-top: 2pt;
+		margin-left: 50pt;
+	}
+	
+	#banner {
+	    width: calc(100% + 12pt);
+		background-color: #404040;
+		
+		margin-left: -6pt;
+		margin-right: -6pt;
+		margin-top: -6pt;
+	}
+	
+	#login {
+	    height: 20pt;
+		margin-right: 10pt;
+		margin-top: 7pt;
+		float: right;
+		cursor: pointer;
+	}
+	
+	#logout {
+	    height: 20pt;
+		margin-right: 10pt;
+		margin-top: 7pt;
+		float: right;
+		cursor: pointer;
+	}
+	
+	#welcome {
+		float: left;
+		position: relative;
+		top: 3.5em;
+		left: 23%;
+		font-family: 'Lalezar', cursive;
+		font-size: 40pt;
+	}
+	#logo{
+            width:70px;
+            height:35px;
+        }
