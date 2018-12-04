@@ -1,3 +1,21 @@
+$(document).ready(function(){
+	$(".switch").hover(function() {
+		$(this).css("text-shadow","-1px 0 #ceaffd, 0 1px #ceaffd, 1px 0 #ceaffd, 0 -1px #ceaffd");
+		$(this).css("transition","filter 0.4s");
+	}, function() {
+		$(this).css("text-shadow", "none");
+		$(this).css("transition","filter 0.4s");
+	});
+	$("#switchRegister").click(function() {
+		$("#userLogin").fadeOut(400);
+		$("#register").delay(400).fadeIn(400);
+	});
+	$("#switchLogin").click(function() {
+		$("#register").fadeOut(400);
+		$("#userLogin").delay(400).fadeIn(400);
+	});
+});
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
 	
