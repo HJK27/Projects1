@@ -28,8 +28,10 @@ var f1 = document.getElementById('fac1');
 	  var par1SPO = par1.child('ocpSpace');
 	  par1F.on('value', snap => p1c[1].innerText = "Fees: " + snap.val());
 	  par1GT.on('value', snap => p1c[2].innerText = "Open To: " + snap.val());
-	  par1SPO.on('value', snap => p1c[3].innerText = "Cars in Lot : " + snap.val());
-	  par1SPT.on('value', snap => p1c[3].innerText += "/" + snap.val());
+      let ttl1 = 0;
+      par1SPO.on('value', snap => p1c[3].innerText = "Cars in Lot : " + snap.val()
+                + "/" + ttl1);
+	  par1SPT.on('value', snap => ttl1 = snap.val());
 	  var p2 = document.getElementById('par2');
 	  var p2c = p2.children;
       var par2 = par.child('park2');
@@ -39,8 +41,10 @@ var f1 = document.getElementById('fac1');
 	  var par2SPO = par2.child('ocpSpace');
 	  par2F.on('value', snap => p2c[1].innerText = "Fees: " + snap.val());
 	  par2GT.on('value', snap => p2c[2].innerText = "Open To: " + snap.val());
-	  par2SPO.on('value', snap => p2c[3].innerText = "Cars in Lot : " + snap.val());
-	  par2SPT.on('value', snap => p2c[3].innerText += "/" + snap.val());
+      let ttl2 = 0;
+	  par2SPO.on('value', snap => p2c[3].innerText = "Cars in Lot : " + snap.val()
+                + "/" + ttl2);
+	  par2SPT.on('value', snap => ttl2 = snap.val());
 	  
 	  var c1 = document.getElementById('cor1');
 	  var c1c = c1.children;
