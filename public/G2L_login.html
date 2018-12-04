@@ -3,158 +3,11 @@
 <head>
 	<title></title>
 	<meta charset="UTF-8">
-	<style type="text/css">
-	@import url('https://fonts.googleapis.com/css?family=Oswald|Lalezar|Pontano+Sans');
-	
-	body {
-		background-image: url("./images/bubble-2811093_1920.jpg");
-	}
-	
-	#title {
-		margin-top: 0.5em;
-		font-family: 'Lalezar', cursive;
-		font-size: 30pt;
-		text-align: center;
-	}
-
-	fieldset {
-		margin-top: 0.8em;
-		text-align: center;
-		font-family: 'Oswald', sans-serif;
-		font-size: 15pt;
-		background-color: rgb(248,248,255, 0.7);
-		border: none;
-		border-radius: 20px;
-		margin-left: 22.5em;
-		margin-right: 22.5em;
-		height: 24em;
-		box-shadow: 6px 6px 10px #999999;
-	}
-	
-	.textfield {
-		font-family: 'Pontano Sans', sans-serif;
-		height: 2em;
-		width: 16em;
-		border-radius: 8px;
-		text-align: center;
-		box-shadow: 6px 6px 10px #999999;
-		border: none;
-		margin-bottom: 1em;
-	}
-	
-	.textfield2 {
-		font-family: 'Pontano Sans', sans-serif;
-		height: 2em;
-		width: 16em;
-		border-radius: 8px;
-		text-align: center;
-		box-shadow: 6px 6px 10px #999999;
-		border: none;
-		margin-bottom: 0.8em;
-	}
-	
-	.button {
-		color: white;
-		background-color: #9d60fb;
-		font-family: 'Oswald', sans-serif;
-		font-size: 14pt;
-		padding: 0.2em 0.8em;
-		border-radius: 20px;
-		border: none;
-	}
-	
-	.divider {
-		margin-bottom: 1em;
-	}
-	
-	#buttons {
-		margin-top: 7.1em;
-		margin-bottom: 0.5em;
-	}
-	
-	.switch {
-		font-size: 12pt;
-		cursor: pointer;
-	}
-	
-	#register {
-		display: none;
-	}
-	
-	#top {
-	    text-align: center;
-		font-size: 25pt;
-		font-weight: bold;
-		border: none;
-		background: transparent;
-	    color: white;
-		cursor: pointer;
-		margin-top: 2pt;
-		margin-left: 50pt;
-	}
-	
-	#banner {
-	    width: calc(100% + 12pt);
-		background-color: #404040;
-		
-		margin-left: -6pt;
-		margin-right: -6pt;
-		margin-top: -6pt;
-	}
-	
-	#login {
-	    height: 20pt;
-		margin-right: 10pt;
-		margin-top: 7pt;
-		float: right;
-		cursor: pointer;
-	}
-	
-	#logout {
-	    height: 20pt;
-		margin-right: 10pt;
-		margin-top: 7pt;
-		float: right;
-		cursor: pointer;
-	}
-	
-	#welcome {
-		float: left;
-		position: relative;
-		top: 3.5em;
-		left: 23%;
-		font-family: 'Lalezar', cursive;
-		font-size: 40pt;
-	}
-	#logo{
-            width:70px;
-            height:35px;
-        }
-	</style>
+	<link rel="stylesheet" type="text/css" href="./CSS/G2L_login_style.css">
 	<script src="jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
-
-	<script>
-		$(document).ready(function(){
-			$(".switch").hover(function() {
-				$(this).css("text-shadow","-1px 0 #ceaffd, 0 1px #ceaffd, 1px 0 #ceaffd, 0 -1px #ceaffd");
-				$(this).css("transition","filter 0.4s");
-			}, function() {
-				$(this).css("text-shadow", "none");
-				$(this).css("transition","filter 0.4s");
-			});
-			$("#switchRegister").click(function() {
-				$("#userLogin").fadeOut(400);
-				$("#register").delay(400).fadeIn(400);
-			});
-			$("#switchLogin").click(function() {
-				$("#register").fadeOut(400);
-				$("#userLogin").delay(400).fadeIn(400);
-			});
-		});
-	</script>
 	
 	<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
     <script>
@@ -170,7 +23,7 @@
       firebase.initializeApp(config);
     </script>
 		
-	<script src="user_login_index.js"></script>
+	<script src="./Javascript/user_login_index.js"></script>
 
 	<div id="banner">
 		<img src="./images/logout.png" id="logout" onclick="logout()">
@@ -195,14 +48,10 @@
 	<fieldset id="register">
 		<form id="submission_form">
 			<div id="title">G2L Register Page</div>
-			<!--<div>Username:<br/>
-			<input type="text" name="username" placeholder="8 - 20 letters" pattern=".{8,20}[A-Z a-z]" required class="textfield2"></div>-->
 			<div>New Email:<br/>
 			<input type="text" name="email" placeholder="ex. MyEmail@gmail.com" class="textfield2" id="new_email_field"></div>
 			<div>New Password:<br/>
 			<input type="password" name="password" placeholder="myPassword123" required class="textfield2" id="new_password_field"></div>
-			<!--<div>Student Number:<br/>
-			<input type="text" name="studentNumber" placeholder="ex. A00809999" pattern=".{9}[A-Z a-z 0-9]" required class="textfield2"></div>-->
 
 			<div id="buttons"><input type="submit" class="button" onclick="newUser()"> &nbsp; <input type="reset" class="button"></div>
 			<span class="switch" id="switchLogin">Return to Login</span>

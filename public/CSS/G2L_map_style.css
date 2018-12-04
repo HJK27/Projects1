@@ -1,0 +1,185 @@
+	@import url('https://fonts.googleapis.com/css?family=Oswald');
+	
+	  body {
+	    margin: 0;
+		height: 100vh;
+	  }
+      #menu {
+        float:left;
+        width: 20%;
+        height: 210pt;
+        background-color: MediumPurple;
+		margin-left: 15pt;
+		margin-top: 15pt;
+		box-shadow: 6px 6px 10px #999999;
+      }
+	  #border {
+	    background-image: url("../images/map.png");
+	    width: 100%;
+	    height: calc(100vh - 47.6667px);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	  }
+	  #banner {
+	    width: 100%;
+		background-color: #404040;
+	  }
+      .item {
+        font-weight: bold;
+        font-size: 15pt;
+		width: 100%;
+		background-color: transparent;
+		margin-top: 4pt;
+		margin-bottom: 4pt;
+		height: 35pt;
+		border: none;
+		cursor: pointer;
+		vertical-align: center;
+		text-align: left;
+      }
+	  .sItem {
+        font-weight: bold;
+        font-size: 15pt;
+		width: 100%;
+		background-color: transparent;
+		margin-top: 4pt;
+		margin-bottom: 4pt;
+		height: 35pt;
+		border: none;
+		cursor: pointer;
+		vertical-align: center;
+		text-align: left;
+      }
+	  .icon {
+	    height: 20pt;
+		margin-right: 13pt;
+		margin-left: 13pt;
+		float: left;
+	  }
+	  #login {
+	    height: 20pt;
+		margin-right: 10pt;
+		margin-top: 7pt;
+		float: right;
+		cursor: pointer;
+	  }
+	  #logout {
+	    height: 20pt;
+		margin-right: 10pt;
+		margin-top: 7pt;
+		float: right;
+		cursor: pointer;
+	  }
+	  .sIcon {
+	    height: 20pt;
+		margin-right: 13pt;
+		margin-left: 13pt;
+		float: left;
+	  }
+	  #top {
+	    text-align: center;
+		font-size: 25pt;
+		font-weight: bold;
+		border: none;
+		background: transparent;
+	    color: white;
+		cursor: pointer;
+		margin-top: 2pt;
+		margin-left: 50pt;
+	  }
+	  #search {
+	    height: 125pt;
+      }
+	  
+	  .grid-container {
+		display: grid;
+		grid-template-columns: auto auto auto auto auto auto;
+		color: black;
+		text-align: center;
+		margin-top: -32em;
+		margin-left: 13em;
+		height: 32em;
+		font-family: 'Oswald', sans-serif;
+	  }
+	  .fac {
+	    height: 50pt;
+		clip-path: circle(50%);
+		shape-outside: circle(50%);
+		margin: 0 auto;
+		cursor: pointer;
+		display: none;
+		position: absolute;
+	  }
+	  .par {
+	    height: 50pt;
+		clip-path: circle(50%);
+		shape-outside: circle(50%);
+		margin: 0 auto;
+		cursor: pointer;
+		display: none;
+		position: absolute;
+	  }
+	  .cor {
+	    height: 50pt;
+		clip-path: circle(50%);
+		shape-outside: circle(50%);
+		margin: 0 auto;
+		cursor: pointer;
+		display: none;
+		position: absolute;
+	  }
+	  .popup {
+	    margin-top: -98pt;
+		margin-left: 10pt;
+		background-color: white;
+		position: absolute;
+		width: 150pt;
+		box-shadow: 6px 6px 10px #999999;
+	  }
+	  .inp {
+	    display: none;
+	  }
+	  .cfi {
+	    height: 20pt;
+		clip-path: circle(50%);
+		shape-outside: circle(50%);
+		margin-left: 37pt;
+		margin-top: -8pt;
+		position: absolute;
+		cursor: pointer;
+		display: none;
+	  }
+	  .cpi {
+	    height: 20pt;
+		clip-path: circle(50%);
+		shape-outside: circle(50%);
+		margin-left: 37pt;
+		margin-top: -8pt;
+		position: absolute;
+		cursor: pointer;
+		display: none;
+	  }
+	  .cci {
+	    height: 20pt;
+		clip-path: circle(50%);
+		shape-outside: circle(50%);
+		margin-left: 37pt;
+		margin-top: -8pt;
+		position: absolute;
+		cursor: pointer;
+		display: none;
+	  }
+	  .cp {
+	    height: 20pt;
+		clip-path: circle(50%);
+		shape-outside: circle(50%);
+		position: absolute;
+		margin-left: 65pt;
+		margin-top: -10pt;
+		cursor: pointer;
+		display: none;
+	  }
+	  #logo{
+        width:70px;
+        height:35px;
+      }
